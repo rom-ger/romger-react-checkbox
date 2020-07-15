@@ -1,0 +1,81 @@
+.rg-react-checkbox {
+  cursor: pointer;
+
+  &:hover {
+    .rg-react-checkbox__check-wrap {
+      &:not(.rg-react-checkbox__check-wrap--checked) {
+        background: #ebecf0;
+      }
+    }
+  }
+
+  &--disabled {
+    cursor: default;
+
+    &:hover {
+      .rg-react-checkbox__check-wrap {
+        &:not(.rg-react-checkbox__check-wrap--checked) {
+          background: #f4f5f7;
+        }
+      }
+    }
+  }
+
+  &--check {
+    width: 32px !important;
+
+    & > div {
+      padding: 0 !important;
+    }
+  }
+
+  &--title {
+    margin-left: 18px;
+    color: #1d2a3a;
+    font-size: 14px;
+  }
+
+  &__icon-check {
+    position: relative;
+    top: -4px;
+    left: 2px;
+    fill: #fff !important;
+    font-size: 10px !important;
+    height: 10px !important;
+    max-height: 10px !important;
+    max-width: 10px !important;
+    min-height: 10px !important;
+    min-width: 10px !important;
+    width: 10px !important;
+  }
+
+  &__check-wrap {
+    width: 14px;
+    height: 14px;
+    background: #fff;
+    border: 2px solid #dfe1e5;
+    border-radius: 2px;
+    flex-shrink: 0;
+
+    &--checked {
+      border: 0;
+      background: #1b5eb7;
+    }
+
+    &--disabled {
+      border: 0;
+      background: #f4f5f7;
+
+      &.rg-react-checkbox__check-wrap--checked {
+        background: #f4f5f7;
+        border: 0;
+      }
+
+      svg {
+        path {
+          fill: #a7adb6 !important;
+        }
+      }
+    }
+  }
+}
